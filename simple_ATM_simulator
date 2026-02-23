@@ -1,0 +1,39 @@
+# ATM Simulator
+# Set an initial balance
+balance = 10000
+while True:
+    # Display the menu
+    print("\nATM Menu")
+    print("1. Check Balance")
+    print("2. Deposit Money")
+    print("3. Withdraw Money")
+    print("4. Exit")
+
+    # Taking user input for choice
+    choice = int(input("Enter your choice (1-4): "))
+    if choice == 1:
+        # Choice 1: Check balance
+        print(f"Your current balance is: ₹{balance}")
+    elif choice == 2:
+        # Choice 2: Deposit money
+        deposit = float(input("Enter amount to deposit: ₹"))
+        balance= balance + deposit
+        print(f"₹{deposit} deposited successfully.")
+        print(f"Updated balance: ₹{balance}")
+    elif choice == 3:
+        # Choice 3: Withdraw money
+        withdraw = float(input("Enter amount to withdraw: ₹"))
+        if withdraw > balance - 500:
+            print("Insufficient balance! Minimum balance of ₹500 must remain.")
+        else:
+            balance= balance - withdraw
+            print(f"₹{withdraw} withdrawn successfully.")
+            print(f"Updated balance: ₹{balance}")
+    elif choice == 4:
+        # Choice 4: Exit
+        print("Exiting ATM. Thank you!")
+        break
+    else:
+        #  choice is invalid
+        print("Invalid choice! Please enter a number between 1 and 4.")
+    
