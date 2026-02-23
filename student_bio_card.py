@@ -1,4 +1,4 @@
-#taking user input
+git #taking user input
 name=input ("Enter Your Name: ")
 age=int(input("Enter Your age: "))
 course=input("Enter Your Course name: ")
